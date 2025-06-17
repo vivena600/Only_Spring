@@ -14,7 +14,7 @@
 
         <!--  Версии зависимостей    -->
         <tomcat-embed-core.version>10.1.24</tomcat-embed-core.version>
-        <spring-webmvc.version>6.1.7</spring-webmvc.version>
+        <spring.version>6.1.7</spring.version>
         <lombok.version>1.18.32</lombok.version>
         <jackson-databind.version>2.17.1</jackson-databind.version>
         <logback-classic.version>1.5.6</logback-classic.version>
@@ -22,6 +22,12 @@
         <hibernate-core.version>6.5.1.Final</hibernate-core.version>
         <postgresql.version>42.7.3</postgresql.version>
         <querydsl-jpa.version>5.1.0</querydsl-jpa.version>
+        <assertj-core.version>3.26.0</assertj-core.version>
+        <hamcrest.version>2.2</hamcrest.version>
+        <junit-jupiter.version>5.10.2</junit-jupiter.version>
+        <mockito.version>5.12.0</mockito.version>
+        <jsonassert.version>1.5.1</jsonassert.version>
+        <json-path.version>2.9.0</json-path.version>
     </properties>
 
     <dependencies>
@@ -34,7 +40,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>${spring-webmvc.version}</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <dependency>
@@ -78,6 +84,63 @@
             <artifactId>querydsl-jpa</artifactId>
             <classifier>jakarta</classifier>
             <version>${querydsl-jpa.version}</version>
+        </dependency>
+
+        <!--   Test artifacts     -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj-core.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.skyscreamer</groupId>
+            <artifactId>jsonassert</artifactId>
+            <version>${jsonassert.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${json-path.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
