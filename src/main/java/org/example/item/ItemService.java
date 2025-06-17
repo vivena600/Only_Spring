@@ -1,9 +1,14 @@
 package org.example.item;
 
 import java.util.List;
+import java.util.Set;
 
 interface ItemService {
-    List<Item> getItems(Long userId);
-    Item addNewItem(Long userId, Item item);
-    void deleteItem(Long userId, Long itemId);
+    List<ItemDto> getItems(long userId);
+
+    List<ItemDto> getItems(long userId, Set<String> tags);
+
+    ItemDto addNewItem(long userId, ItemDto itemDto);
+
+    void deleteItem(long userId, long itemId);
 }

@@ -1,9 +1,13 @@
 package org.example.item;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
+
 import java.util.List;
 
-public interface ItemRepository {
-    List<Item> findByUserId(Long userId);
-    Item save(Item item);
-    void deleteByUserIdAndItemId(Long userId, Long itemId);
+public interface ItemRepository extends JpaRepository<Item, Long>, QuerydslPredicateExecutor<Item> {
+
+    List<Item> findByUserId(long userId);
+
+    void deleteByUserIdAndId(long userId, long itemId);
 }
